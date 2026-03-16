@@ -22,13 +22,7 @@ export default function Navbar() {
                     Sinónimos en Contexto
                 </div>
 
-                <div className="hidden md:flex items-center gap-8 transition duration-500">
-                    {navlinks.map((link: INavLink) => (
-                        <Link key={link.name} href={link.href} className="hover:text-pink-500 transition">
-                            {link.name}
-                        </Link>
-                    ))}
-                </div>
+                
 
                 <button className="hidden md:block px-6 py-2.5 bg-pink-600 hover:bg-pink-700 active:scale-95 transition-all rounded-full">
                     Jugar ahora
