@@ -1,6 +1,8 @@
 'use client'
 import SectionTitle from "@/components/SectionTitle";
 import { motion } from "motion/react";
+import Image from "next/image";
+import NinosJugando from "/public/imagenes/NinosEstudiando.png";
 
 export default function FeaturesSection() {
     const ejemplos = [
@@ -53,7 +55,28 @@ export default function FeaturesSection() {
                     transition={{ type: "spring", stiffness: 320, damping: 70, mass: 1 }}
                 >
                 </motion.p>
-                
+
+                {/* Galería de imágenes */}
+                <div className="items-center mt-16 grid grid-cols-1 ">
+                    <motion.div
+                        initial={{ x: -50, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ type: "spring", stiffness: 320, damping: 70, mass: 1 }}
+                        className="rounded-2xl border border-blue-900/30 overflow-hidden bg-slate-900/50 backdrop-blur p-4"
+                    >
+                        <Image
+                            src="/imagenes/NinosJugando.png"
+                            alt="Niños estudiando"
+                            width={600}
+                            height={400}
+                            className="w-150 h-auto mx-auto rounded-lg object-cover"
+                        />
+                        <p className="mt-4 text-center text-slate-300 font-semibold">Aprendiendo juntos</p>
+                    </motion.div>
+
+                    
+                </div>
             </div>
         </div>
     );

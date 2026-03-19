@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ChevronRightIcon, CheckIcon, RefreshCwIcon } from "lucide-react";
+import Image from "next/image";
 
 type Pregunta = {
   palabra: string;
@@ -268,6 +269,7 @@ export default function JuegoSinonimos() {
           <h3 className="mt-3 text-5xl font-extrabold bg-linear-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">
             {preguntaActual.palabra}
           </h3>
+
 
           <div className="mt-8">
             <input
