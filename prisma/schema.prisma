@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model para autenticación
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  username      String    @unique
+  password      String    // hasheada con bcryptjs
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  scores        Score[]   // Relación con scores
+  
+  @@map("users")
+}
+
+// Score model para el leaderboard del juego de sinónimos
+model Score {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  points    Int
+  sinonimosAcertados Int @default(0)
+  tiempoJuego Int @default(0) // en segundos
+  createdAt DateTime  @default(now())
+  
+  @@index([userId])
+  @@index([points])
+  @@map("scores")
+}
+
+// Sinonimo model para guardar pares de sinónimos
+model Sinonimo {
+  id        String    @id @default(cuid())
+  palabra   String    @unique
+  sinonimos String[]  // JSON array de sinónimos
+  dificultad String   @default("media") // fácil, media, difícil
+  categoria String    @default("general")
+  createdAt DateTime  @default(now())
+  
+  @@index([dificultad])
+  @@map("sinonimos")
+}
+
+// Palabra model para guardar palabras del juego
+model Palabra {
+  id        String    @id @default(cuid())
+  texto     String    @unique
+  definicion String
+  categoria String    @default("general")
+  dificultad String   @default("media")
+  createdAt DateTime  @default(now())
+  
+  @@index([dificultad])
+  @@index([categoria])
+  @@map("palabras")
+}
