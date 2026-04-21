@@ -319,42 +319,42 @@ export default function JuegoSinonimos() {
         className="relative flex flex-col items-center justify-center px-4 md:px-16 lg:px-24 xl:px-32 py-16"
       >
         <div className="absolute top-30 -z-10 left-1/4 size-72 bg-blue-600 blur-[300px]"></div>
-        <div className="max-w-4xl rounded-2xl border border-blue-900/30 bg-slate-900/50 backdrop-blur p-8 w-full">
-          <h2 className="text-4xl font-extrabold text-white mb-4">Selecciona el nivel de dificultad</h2>
-          <p className="text-slate-300 mb-8">Elige con cuantas palabras quieres practicar:</p>
+        <div className="max-w-4xl rounded-2xl border border-blue-900/30 bg-slate-900/50 backdrop-blur p-4 sm:p-6 md:p-8 w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4">Selecciona el nivel de dificultad</h2>
+          <p className="text-sm sm:text-base text-slate-300 mb-6 sm:mb-8">Elige con cuantas palabras quieres practicar:</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Fácil */}
             <button
               onClick={() => iniciarJuego("facil")}
               disabled={cargandoPreguntas}
-              className="rounded-xl bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 active:scale-95 transition-all px-6 py-6 font-semibold text-white border border-green-500/30 text-center disabled:opacity-60 disabled:cursor-not-allowed"
+              className="rounded-xl bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 active:scale-95 transition-all px-4 py-4 sm:px-5 sm:py-5 md:px-6 md:py-6 font-semibold text-white border border-green-500/30 text-center disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              <div className="text-3xl mb-2">{cargandoPreguntas ? "⏳" : "🟢"}</div>
-              <h3 className="text-xl font-bold mb-2">Fácil</h3>
-              <p className="text-sm">{cargandoPreguntas ? "Cargando..." : "5 palabras"}</p>
+              <div className="text-2xl sm:text-3xl mb-2">{cargandoPreguntas ? "⏳" : "🟢"}</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Fácil</h3>
+              <p className="text-xs sm:text-sm">{cargandoPreguntas ? "Cargando..." : "5 palabras"}</p>
             </button>
 
             {/* Medio */}
             <button
               onClick={() => iniciarJuego("medio")}
               disabled={cargandoPreguntas}
-              className="rounded-xl bg-gradient-to-br from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 active:scale-95 transition-all px-6 py-6 font-semibold text-white border border-yellow-500/30 text-center disabled:opacity-60 disabled:cursor-not-allowed"
+              className="rounded-xl bg-gradient-to-br from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 active:scale-95 transition-all px-4 py-4 sm:px-5 sm:py-5 md:px-6 md:py-6 font-semibold text-white border border-yellow-500/30 text-center disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              <div className="text-3xl mb-2">{cargandoPreguntas ? "⏳" : "🟡"}</div>
-              <h3 className="text-xl font-bold mb-2">Medio</h3>
-              <p className="text-sm">{cargandoPreguntas ? "Cargando..." : "8 palabras"}</p>
+              <div className="text-2xl sm:text-3xl mb-2">{cargandoPreguntas ? "⏳" : "🟡"}</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Medio</h3>
+              <p className="text-xs sm:text-sm">{cargandoPreguntas ? "Cargando..." : "8 palabras"}</p>
             </button>
 
             {/* Difícil */}
             <button
               onClick={() => iniciarJuego("dificil")}
               disabled={cargandoPreguntas}
-              className="rounded-xl bg-gradient-to-br from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 active:scale-95 transition-all px-6 py-6 font-semibold text-white border border-red-500/30 text-center disabled:opacity-60 disabled:cursor-not-allowed"
+              className="rounded-xl bg-gradient-to-br from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 active:scale-95 transition-all px-4 py-4 sm:px-5 sm:py-5 md:px-6 md:py-6 font-semibold text-white border border-red-500/30 text-center disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              <div className="text-3xl mb-2">{cargandoPreguntas ? "⏳" : "🔴"}</div>
-              <h3 className="text-xl font-bold mb-2">Difícil</h3>
-              <p className="text-sm">{cargandoPreguntas ? "Cargando..." : "12 palabras"}</p>
+              <div className="text-2xl sm:text-3xl mb-2">{cargandoPreguntas ? "⏳" : "🔴"}</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Difícil</h3>
+              <p className="text-xs sm:text-sm">{cargandoPreguntas ? "Cargando..." : "12 palabras"}</p>
             </button>
           </div>
         </div>
@@ -369,12 +369,12 @@ export default function JuegoSinonimos() {
         className="relative flex flex-col items-center justify-center px-4 md:px-16 lg:px-24 xl:px-32 py-16"
       >
         <div className="absolute top-30 -z-10 left-1/4 size-72 bg-blue-600 blur-[300px]"></div>
-        <div className="max-w-3xl rounded-2xl border border-blue-900/30 bg-slate-900/50 backdrop-blur p-8 w-full">
-          <h2 className="text-4xl font-extrabold text-white">¡Juego terminado!</h2>
+        <div className="max-w-3xl rounded-2xl border border-blue-900/30 bg-slate-900/50 backdrop-blur p-4 sm:p-6 md:p-8 w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">¡Juego terminado!</h2>
 
-          <p className="mt-6 text-xl text-slate-200">Has concluido con la clase de sinónimos.</p>
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-slate-200">Has concluido con la clase de sinónimos.</p>
 
-          <div className="mt-4 inline-flex rounded-2xl bg-blue-900/40 backdrop-blur px-6 py-4 text-3xl font-extrabold text-blue-300 border border-blue-500/30">
+          <div className="mt-4 inline-flex rounded-2xl bg-blue-900/40 backdrop-blur px-4 sm:px-5 md:px-6 py-3 sm:py-4 text-xl sm:text-2xl md:text-3xl font-extrabold text-blue-300 border border-blue-500/30">
             {puntaje} / {totalPreguntas}
           </div>
 
@@ -435,22 +435,22 @@ export default function JuegoSinonimos() {
     >
       <div className="absolute top-30 -z-10 left-1/4 size-72 bg-blue-600 blur-[300px]"></div>
 
-      <div className="max-w-4xl rounded-2xl border border-blue-900/30 bg-slate-900/50 backdrop-blur p-8 w-full">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <h2 className="text-4xl font-extrabold text-white">Juguemos con sinónimos</h2>
+      <div className="max-w-4xl rounded-2xl border border-blue-900/30 bg-slate-900/50 backdrop-blur p-4 sm:p-6 md:p-8 w-full">
+        <div className="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-center md:justify-between">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">Juguemos con sinónimos</h2>
 
-          <div className="rounded-2xl bg-blue-900/40 backdrop-blur px-4 py-2 text-lg font-bold text-blue-300 border border-blue-500/30">
+          <div className="rounded-2xl bg-blue-900/40 backdrop-blur px-3 sm:px-4 py-2 text-base sm:text-lg font-bold text-blue-300 border border-blue-500/30 w-fit">
             Puntaje: {puntaje}
           </div>
         </div>
 
-        <div className="mt-6">
-          <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-300">
+        <div className="mt-4 sm:mt-6">
+          <div className="mb-2 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-300">
             <span>Completadas {preguntasCorrectas} de {totalPreguntas}</span>
             <span>{Math.round(progreso)}%</span>
           </div>
 
-          <div className="h-4 w-full overflow-hidden rounded-full bg-slate-700/50">
+          <div className="h-3 sm:h-4 w-full overflow-hidden rounded-full bg-slate-700/50">
             <div
               className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-400 transition-all duration-500 ease-in-out"
               style={{ width: `${progreso}%` }}
@@ -458,14 +458,14 @@ export default function JuegoSinonimos() {
           </div>
         </div>
 
-        <div className="mt-10">
-          <p className="text-lg font-semibold text-slate-300">Escribamos el sinónimo de:</p>
+        <div className="mt-6 sm:mt-10">
+          <p className="text-base sm:text-lg font-semibold text-slate-300">Escribamos el sinónimo de:</p>
 
-          <h3 className="mt-3 text-5xl font-extrabold bg-linear-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">
+          <h3 className="mt-2 sm:mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold bg-linear-to-r from-blue-400 to-blue-300 text-transparent bg-clip-text">
             {preguntaActual?.palabra}
           </h3>
 
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <input
               type="text"
               value={respuesta}
@@ -473,15 +473,15 @@ export default function JuegoSinonimos() {
               onKeyDown={(e) => e.key === "Enter" && verificarRespuesta()}
               placeholder="Escribe tu respuesta aquí"
               disabled={bloqueado}
-              className="w-full rounded-xl border border-blue-900/30 bg-slate-800/50 backdrop-blur px-5 py-4 text-lg text-white outline-none transition placeholder-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 disabled:opacity-60"
+              className="w-full rounded-xl border border-blue-900/30 bg-slate-800/50 backdrop-blur px-4 sm:px-5 py-3 sm:py-4 text-base sm:text-lg text-white outline-none transition placeholder-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30 disabled:opacity-60"
             />
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-4">
+          <div className="mt-4 sm:mt-6 flex flex-wrap gap-3 sm:gap-4">
             <button
               onClick={verificarRespuesta}
               disabled={bloqueado}
-              className="rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all px-6 py-3 font-semibold text-white disabled:opacity-60"
+              className="rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all px-4 sm:px-5 md:px-6 py-2 sm:py-3 font-semibold text-sm sm:text-base text-white disabled:opacity-60"
             >
               Verificar
             </button>
@@ -490,7 +490,7 @@ export default function JuegoSinonimos() {
 
           {mensaje && (
             <div
-              className={`mt-6 rounded-xl px-5 py-4 text-lg font-semibold backdrop-blur border transition-all ${
+              className={`mt-4 sm:mt-6 rounded-xl px-4 sm:px-5 py-3 sm:py-4 text-base sm:text-lg font-semibold backdrop-blur border transition-all ${
                 tipoMensaje === "ok"
                   ? "bg-green-500/20 text-green-300 border-green-500/30"
                   : tipoMensaje === "error"
@@ -499,7 +499,7 @@ export default function JuegoSinonimos() {
               }`}
             >
               <div className="flex items-center gap-2">
-                {tipoMensaje === "ok" && <CheckIcon size={20} />}
+                {tipoMensaje === "ok" && <CheckIcon size={18} className="sm:size-20" />}
                 <span>{mensaje}</span>
               </div>
             </div>

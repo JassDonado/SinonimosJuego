@@ -15,15 +15,15 @@ export default function LeaderboardPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-4 sm:p-6 md:p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold text-white">🏆 Leaderboard</h1>
-          <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6 sm:mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white">🏆 Leaderboard</h1>
+          <div className="flex flex-wrap gap-2 sm:gap-3 w-full sm:w-auto">
             <Link
               href="/"
-              className="px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition"
+              className="flex-1 sm:flex-none px-3 sm:px-4 py-2 text-sm sm:text-base bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition text-center"
             >
               Volver
             </Link>
@@ -31,13 +31,13 @@ export default function LeaderboardPage() {
               <>
                 <button
                   onClick={scrollToGame}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
+                  className="flex-1 sm:flex-none px-3 sm:px-4 py-2 text-sm sm:text-base bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition text-center"
                 >
                   Jugar
                 </button>
                 <button
                   onClick={() => signOut({ redirectTo: "/" })}
-                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition"
+                  className="flex-1 sm:flex-none px-3 sm:px-4 py-2 text-sm sm:text-base bg-red-600 hover:bg-red-700 text-white rounded-lg transition text-center"
                 >
                   Cerrar Sesión
                 </button>
@@ -48,14 +48,14 @@ export default function LeaderboardPage() {
 
         {/* Información del usuario si está logueado */}
         {session && (
-          <div className="mb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-slate-800 rounded-lg p-4 border border-blue-500/30">
-              <p className="text-slate-400 text-sm mb-1">Usuario</p>
-              <p className="text-white font-semibold">{session.user?.name}</p>
+          <div className="mb-6 sm:mb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-blue-500/30">
+              <p className="text-slate-400 text-xs sm:text-sm mb-1">Usuario</p>
+              <p className="text-white font-semibold text-sm sm:text-base truncate">{session.user?.name}</p>
             </div>
-            <div className="bg-slate-800 rounded-lg p-4 border border-blue-500/30">
-              <p className="text-slate-400 text-sm mb-1">Email</p>
-              <p className="text-white font-semibold text-sm">{session.user?.email}</p>
+            <div className="bg-slate-800 rounded-lg p-3 sm:p-4 border border-blue-500/30">
+              <p className="text-slate-400 text-xs sm:text-sm mb-1">Email</p>
+              <p className="text-white font-semibold text-xs sm:text-sm truncate">{session.user?.email}</p>
             </div>
           </div>
         )}
@@ -65,7 +65,7 @@ export default function LeaderboardPage() {
 
         {/* Sección del juego */}
         {session && (
-          <div ref={gameRef} className="mt-12">
+          <div ref={gameRef} className="mt-8 sm:mt-12">
             <JuegoSinonimos />
           </div>
         )}
