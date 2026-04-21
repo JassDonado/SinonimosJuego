@@ -28,6 +28,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^25.0.3",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19.2.7",
     "baseline-browser-mapping": "^2.10.8",
     "eslint": "^9",
