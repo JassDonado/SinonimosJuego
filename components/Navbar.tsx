@@ -57,14 +57,14 @@ export default function Navbar() {
                         <>
                             <button
                                 onClick={() => setAuthModal({ isOpen: true, mode: "login" })}
-                                className="px-4 py-2 text-slate-300 hover:text-white transition text-sm md:text-base"
+                                className="px-4 md:px-6 py-2 md:py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all rounded-full text-xs sm:text-sm md:text-base font-semibold text-white shadow-lg shadow-blue-600/50 whitespace-nowrap"
                             >
                                 Ingresar
                             </button>
                             
                             <Link
                                 href="#jugar"
-                                className="hidden md:block px-4 md:px-6 py-2 md:py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all rounded-full text-sm md:text-base"
+                                className="hidden sm:block px-4 md:px-6 py-2 md:py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all rounded-full text-xs md:text-base font-semibold shadow-lg shadow-blue-600/50 whitespace-nowrap"
                             >
                                 Jugar ahora
                             </Link>
