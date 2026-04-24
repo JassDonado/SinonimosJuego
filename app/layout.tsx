@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-    title: "Sinónimos en Contexto",
+    title: "Aprendamos Sinonimos",
     description: "Aprende sinónimos jugando",
     icons: {
         icon: "/favicon.ico",
