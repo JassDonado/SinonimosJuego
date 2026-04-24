@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 
 export const metadata = {
-    title: "Sinónimos en contexto",
+    title: "Juguemos con Sinónimos",
     description: "Una aplicación para aprender sinónimos de manera divertida y contextualizada. Mejora tu vocabulario mientras juegas y compites con tus amigos.",
 };
 
